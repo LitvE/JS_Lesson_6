@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 //переписать массив наоборот
 //костыль
 let array1 = [1, 2, 3, 4, 5];
@@ -115,4 +115,54 @@ map1.set("Anna", 10);
 //clear map
 //map1.clear();
 
+*/
 
+//деструктуризация массива
+
+const arr = ['val1', 'val2', 'val3','val4','val5', 'val6'];
+
+const [el0, el1] = arr;
+
+const [e1, e2, , e3] = arr;
+
+const [firstEl, ...restArr] = arr;
+
+console.log(firstEl);
+console.log(restArr);
+
+// сам массив не меняется
+
+const arr2 = ['val1', [2,5,1,5,9,4,5], 'val3','val4','val5'];
+
+const [elem1, ...rest] = arr2;
+console.log(elem1);
+const [l1, , , l4] = arr2;
+console.log(l4);
+const [, [, , i3]] = arr2; // search 1 in array as second element of array
+console.log(i3);
+
+//объединение массивов
+
+const myArray1 = [1, 2, 3, 4, 5];
+const myArray2 = ['test1', 'test2', 'test3'];
+
+let result = [...myArray1, ...myArray2];
+
+//тоже самое с уникаотными значениями
+
+result = new Set([...myArray1, ...myArray2]);
+
+// with Odjects
+
+const obj1 = {
+    fname: 'Tom',
+    sname: 'Fox'
+};
+
+const obj2 = {
+    fname: 'John',
+    age: 30
+};
+
+result = {...obj1, ...obj2};
+console.log(result);
