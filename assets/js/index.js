@@ -77,3 +77,42 @@ function task6 (arr){
 
 let result = task6(array3);
 console.log(result);
+
+//Set множество
+
+let set1 = new Set([1, 2, 3, 4, 5]);
+let set2 = new Set([1, 1, 1, 1, 2, 2, 2, 3, 4, 5, 5]);
+let set3 = new Set([1, 1, 1, 1, 2, ,,, 3, 4,,,5, 5]);
+
+console.log(set1);
+console.log(set2);
+console.log(set3);
+
+//добавление, добавление повторное элемента игнорируется
+set1.add(6);
+set1.add('hello');
+
+let set4 = new Set([{name: 'Masha'}, {name: 'Petya'}]);
+set4.add({name: 'Vasya'});
+const obj = {name: 'test'};
+let set5 = new Set([obj, obj, obj]);
+
+//Map - object
+
+const map1 = new Map();
+map1.set("Anna", 20);
+map1.set("Tom", 23);
+
+console.log(map1.get("Tom"));
+
+//добовление элемента с ключом, который уже существует приводит к его перезаписи
+
+map1.set("Anna", 10);
+
+//delete element
+//map1.delete("Ann");
+
+//clear map
+//map1.clear();
+
+
